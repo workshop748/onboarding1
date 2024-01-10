@@ -1,4 +1,3 @@
 import requests
 
 r = requests.get('https://www.scrapethissite.com/pages/simple/', auth =('user','pass'))
-r.status_coderoub
