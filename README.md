@@ -10,7 +10,12 @@ Markdown is a lightweight markup language. to understand and use markdown for do
 ### JSON Request
 This section is being a massive head ach to me at the moment
 I am learning how to build a scrapper from the html document and collecting it from tag name
-all together we need to install the two libaries such as requests and bs4 just so we buld our scaper and collect the data and stores it in a txt document
+all together we need to install the two libaries 
+from this i have colected the html from the website 
+then used buetifual soup to scarp for the information
+then used a print statement to make it look nice
+[request](https://requests.readthedocs.io/en/latest/user/quickstart/#json-response-content)
+[buetifualsoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
 
 ### Input Validation
 ### Postman Calls
