@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  nextcloud:
+    image: nextcloud
+    container_name: nextcloud
+    restart: always
+    ports:
+      -8080:80
+    volumes:
+      -nextcloud_data:/var/www/html/data
+    environment:
+      - MYSQL_HOST=db
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD = SECUREpassword
+  
+  db:
+    image: mariadb
+    container_name: nextcloud_db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=THEPASSWORD!
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=SECUREpassword
+    volumes:
+      -nextq:/var/lib/mysql
+  
+  mincraft:
+    image: itzg/mincraft-server
+    container_name: mincraft
+    restart: always
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+volumes:
+  nextcloud_data:
+  nextcloud_db:
+  
